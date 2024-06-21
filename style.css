@@ -1,0 +1,210 @@
+:root {
+  --phone-color: linear-gradient(45deg, rgb(95, 128, 112), rgb(72, 104, 114));
+}
+* {
+  transition: all 0.5s;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+body {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+.deviceShow {
+  overflow: visible;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.deviceShow.change2 {
+  height: 930px;
+  scale: 1;
+  overflow: hidden;
+}
+.phone {
+  z-index: 2;
+  width: 20rem;
+  height: 45rem;
+  background-image: var(--phone-color);
+  transition: all 0.3s;
+  border: solid black 5px;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.phone.change {
+  width: 55rem;
+  height: 45rem;
+  border: solid black 10px;
+  border-radius: 25px;
+}
+.phone.change.change2 {
+  transform: skew(-5deg, 15deg);
+  scale: 0.6;
+  box-shadow: 8px -8px gray;
+}
+.btncontainer {
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  top: 825px;
+}
+.dotbtn {
+  z-index: 2;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: rgb(200, 220, 255);
+  padding: 5px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+.topbar {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+  font-size: 0.8rem;
+  overflow-y: hidden;
+}
+.topbar > div {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.time {
+  flex: 1;
+}
+.battery {
+  text-align: right;
+  flex: 1;
+}
+.camera {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(48, 48, 48);
+  border: solid rgb(0, 0, 0) 2px;
+  border-radius: 50%;
+  margin: 5px;
+  transition: all 0.3s;
+}
+.camera.change {
+  width: 4rem;
+  height: 1.2rem;
+  margin: 0;
+  margin-top: -0.9rem;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+}
+.screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: white;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.screen > h1,
+h2 {
+  margin-left: 1rem;
+}
+.cardcontainer {
+  width: 100%;
+  height: 20%;
+  background-color: ye/llow;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.cardcontainer-4 {
+  width: 100%;
+  height: 30%;
+  background-color: ye/llow;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.ad {
+  width: 160px;
+  height: 80%;
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+  display: inline-block;
+  scroll-snap-align: center;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
+}
+.navbar {
+  z-index: 1;
+  position: absolute;
+  top: 97.5%;
+  bottom: 0;
+  width: 8rem;
+  height: 0.5rem;
+  background-color: rgba(200, 200, 200, 0.5);
+  position: relative;
+  border-radius: 0.25rem;
+  margin: 5px;
+  backdrop-filter: blur(5px);
+}
+.key {
+  margin-top: -35rem;
+  border-radius: 30px;
+  box-shadow: 10px 15px gray;
+  transform: skew(-60deg, 15deg) scaleY(0.5);
+  scale: 0.6;
+  filter: blur(5px);
+}
+.key.change {
+  filter: blur(0);
+  display: block;
+  scale: 0.6;
+  margin-top: -20rem;
+  margin-left: -16rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .phone.change {
+    scale: 0.5;
+    rotate: 90deg;
+  }
+  .phone.change.change2 {
+    rotate: 0deg;
+  }
+  .key {
+    scale: 0.3;
+    margin-top: -27rem;
+  }
+  .btncontainer {
+    width: auto;
+  }
+}
