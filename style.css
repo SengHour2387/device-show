@@ -195,7 +195,8 @@ h2 {
 @media only screen and (max-width: 768px) {
   .phone.change {
     scale: 0.5;
-    rotate: 90deg;
+    transform: skew(5deg, -30deg) scalex(0.5);
+    box-shadow: -18px -8px gray;
   }
   .phone.change.change2 {
     rotate: 0deg;
